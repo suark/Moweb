@@ -15,7 +15,7 @@ const babelLoaderConfiguration = {
   test: /\.js$|tsx?$/,
   // Add every directory that needs to be compiled by Babel during the build.
   include: [
-    path.resolve(__dirname, 'index.web.js'), // Entry to your application
+    path.resolve(__dirname, 'index.js'), // Entry to your application
     path.resolve(__dirname, 'App.web.tsx'), // Change this to your main App file
     path.resolve(__dirname, 'src'),
     ...compileNodeModules,
@@ -42,7 +42,7 @@ const imageLoaderConfiguration = {
 };
 
 module.exports = {
-  entry: [path.resolve(appDirectory, 'index.web.js')],
+  entry: [path.resolve(appDirectory, 'index.js')],
   output: {
     path: path.resolve(appDirectory, 'dist'),
     publicPath: '/',
