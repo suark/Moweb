@@ -1,0 +1,12 @@
+{
+  "prettier.configPath": ".prettierrc.js",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "[typescriptreact]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+}
