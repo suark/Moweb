@@ -24,39 +24,29 @@ const babelLoaderConfiguration = {
     loader: 'babel-loader',
     options: {
       cacheDirectory: true,
-      presets,
+      presets: ['module:metro-react-native-babel-preset'],
       plugins: ['react-native-web'],
     },
   },
 };
 
-const svgLoaderConfiguration = {
-  test: /\.svg$/,
-  use: [
-    {
-      loader: '@svgr/webpack',
-    },
-  ],
-};
-
 const imageLoaderConfiguration = {
-  test: /\.(gif|jpe?g|png)$/,
+  test: /\.(gif|jpe?g|png|svg)$/,
   use: {
     loader: 'url-loader',
     options: {
       name: '[name].[ext]',
+      esmodule: false,
     },
   },
 };
 
 module.exports = {
-  entry: {
-    app: path.join(__dirname, 'index.web.js'),
-  },
+  entry: [path.resolve(appDirectory, 'index.web.js')],
   output: {
     path: path.resolve(appDirectory, 'dist'),
     publicPath: '/',
-    filename: 'moweb.bundle.js',
+    filename: 'bundle.web.js',
   },
   resolve: {
     extensions: ['.web.tsx', '.web.ts', '.tsx', '.ts', '.web.js', '.js'],
@@ -65,7 +55,7 @@ module.exports = {
     },
   },
   module: {
-    rules: [babelLoaderConfiguration, imageLoaderConfiguration, svgLoaderConfiguration],
+    rules: [babelLoaderConfiguration, imageLoaderConfiguration],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -73,7 +63,6 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      // See: https://github.com/necolas/react-native-web/issues/349
       __DEV__: JSON.stringify(true),
     }),
   ],
