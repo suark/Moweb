@@ -1,6 +1,7 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { ReactElement, useMemo, useReducer } from 'react';
+import { useColorScheme } from 'react-native';
 import { Home, Login, LogoutButton, Settings } from '../screens';
 import './GestureHandler';
 
@@ -57,6 +58,7 @@ function mainReducer(prevState: StateType, action: ActionType) {
 
 export function Main(): ReactElement {
   const [state, dispatch] = useReducer(mainReducer, initialState);
+  const scheme = useColorScheme();
 
   const authContext = useMemo(
     () => ({
@@ -70,7 +72,7 @@ export function Main(): ReactElement {
   );
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
       <AuthContext.Provider value={authContext}>
         <Stack.Navigator
           screenOptions={{

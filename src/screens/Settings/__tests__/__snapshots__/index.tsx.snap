@@ -10,7 +10,16 @@ exports[`should render correctly 1`] = `
     }
   }
 >
-  <Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
     Some Option
   </Text>
   <RCTSwitch
@@ -26,7 +35,16 @@ exports[`should render correctly 1`] = `
     }
     value={true}
   />
-  <Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
     Some Other Option
   </Text>
   <RCTSwitch
@@ -42,7 +60,16 @@ exports[`should render correctly 1`] = `
     }
     value={false}
   />
-  <Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
     Some Other Other Option
   </Text>
   <RCTSwitch

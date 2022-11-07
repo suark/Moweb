@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
-import { Switch, Text } from 'react-native';
-import { Container } from '../../components';
+import { Switch } from 'react-native';
+import { Container, Text } from '../../components';
 
 export function Settings(): ReactElement {
   const [switchVal1, setSwitchVal1] = useState(true);

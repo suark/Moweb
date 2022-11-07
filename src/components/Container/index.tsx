@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
-import { View } from 'react-native';
-import { styles } from './styles';
+import { StyleSheet, View } from 'react-native';
 
 type Props = {
   children: React.ReactElement | ReactElement[];
@@ -17,3 +16,11 @@ export function Container({ children, testID }: Props): React.ReactElement {
     </View>
   );
 }
+
+export const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

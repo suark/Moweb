@@ -1,6 +1,7 @@
 import React, { ReactElement, useContext, useState } from 'react';
-import { Button, TextInput, View } from 'react-native';
-import { AuthContext } from '../../navigation';
+import { Button, TextInput } from 'react-native';
+import { Container } from '../../components';
+import { AuthContext } from '../../main';
 
 export function Login(): ReactElement {
   const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ export function Login(): ReactElement {
   const { signIn } = useContext(AuthContext);
 
   return (
-    <View>
+    <Container>
       <TextInput
         placeholder='Username'
         value={username}
@@ -25,7 +26,7 @@ export function Login(): ReactElement {
         title='Log in'
         onPress={() => signIn({ username, password })}
       />
-    </View>
+    </Container>
   );
 }
 

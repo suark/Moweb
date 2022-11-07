@@ -3,7 +3,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import React, { ReactElement } from 'react';
 import { Button } from 'react-native';
 import { Container } from '../../components';
-import { MainStackParams } from '../../navigation';
+import { MainStackParams } from '../../main';
 
 type NavigationProps = StackNavigationProp<MainStackParams, 'Home'>;
 
