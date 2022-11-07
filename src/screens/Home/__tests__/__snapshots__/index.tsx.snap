@@ -15,8 +15,8 @@ exports[`should render correctly 1`] = `
   </Text>
   <View
     accessibilityRole="button"
-    accessibilityState={Object {}}
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}

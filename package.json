@@ -9,6 +9,7 @@
     "web": "webpack serve --mode=development --config webpack.config.js",
     "build-web": "rm -rf dist/ && webpack --mode=production --config webpack.config.js",
     "test": "jest",
+    "test-watch": "jest -u --forceExit --detectOpenHandles --watchAll",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-and-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
@@ -46,6 +47,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "html-webpack-plugin": "5.5.0",
     "jest": "26.6.3",
+    "jest-transform-stub": "2.0.0",
     "metro-react-native-babel-preset": "0.70.3",
     "prettier": "2.7.1",
     "react-dom": "18.2.0",
@@ -65,6 +67,28 @@
       "jsx",
       "json",
       "node"
+    ],
+    "transform": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "moduleNameMapper": {
+      "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js",
+      "<rootDir>/src/mocks/Setup/index.ts"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
