@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { AppRegistry, Platform } from 'react-native';
 import { name as appName } from '../app.json';
-import { Navigation } from './navigation';
+import { Main } from './navigation';
 
 export function App(): ReactElement {
-  return <Navigation />;
+  return <Main />;
 }
 
 AppRegistry.registerComponent(appName, () => App);

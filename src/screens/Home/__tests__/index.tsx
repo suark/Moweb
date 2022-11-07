@@ -8,9 +8,9 @@ it('should render correctly', () => {
   expect(component.toJSON()).toMatchSnapshot();
 });
 
-it('navigates to details', () => {
+it('navigates to settings', () => {
   const component = renderer.create(<Home />);
-  const button = component.root.findByProps({ testID: 'details' });
+  const button = component.root.findByProps({ testID: 'settings' });
   button.instance.props.onPress();
-  expect(mockNavigation.navigate).toBeCalledWith('Details', { data: '🤪' });
+  expect(mockNavigation.navigate).toBeCalledWith('Settings');
 });

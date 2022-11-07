@@ -1,15 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render correctly 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
+<View>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Username"
+    value=""
+  />
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Password"
+    secureTextEntry={true}
+    value=""
+  />
   <View
     accessibilityRole="button"
     accessible={true}
@@ -27,7 +30,6 @@ exports[`should render correctly 1`] = `
         "opacity": 1,
       }
     }
-    testID="settings"
   >
     <View
       style={
@@ -48,7 +50,7 @@ exports[`should render correctly 1`] = `
           ]
         }
       >
-        Go to Settings
+        Log in
       </Text>
     </View>
   </View>
