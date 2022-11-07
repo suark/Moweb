@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
+    Some Option
+  </Text>
+  <RCTSwitch
+    accessibilityRole="switch"
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": 31,
+        "width": 51,
+      }
+    }
+    value={true}
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
+    Some Other Option
+  </Text>
+  <RCTSwitch
+    accessibilityRole="switch"
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": 31,
+        "width": 51,
+      }
+    }
+    value={false}
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
+    Some Other Other Option
+  </Text>
+  <RCTSwitch
+    accessibilityRole="switch"
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": 31,
+        "width": 51,
+      }
+    }
+    value={false}
+  />
+</View>
+`;

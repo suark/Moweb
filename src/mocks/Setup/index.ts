@@ -8,7 +8,7 @@ jest.mock('react-native-reanimated', () => {
   return Reanimated;
 });
 
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 export const mockNavigation = {
   goBack: jest.fn(),
@@ -18,6 +18,7 @@ export const mockNavigation = {
 };
 jest.mock('@react-navigation/native', () => {
   return {
+    ...jest.requireActual('@react-navigation/native'),
     useRoute: () => jest.fn(),
     useNavigation: () => ({
       goBack: mockNavigation.goBack,
