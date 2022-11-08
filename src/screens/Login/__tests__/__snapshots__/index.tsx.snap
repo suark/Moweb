@@ -10,15 +10,73 @@ exports[`should render correctly 1`] = `
     }
   }
 >
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
+    Username
+  </Text>
   <TextInput
     onChangeText={[Function]}
-    placeholder="Username"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(216, 216, 216)",
+          "borderRadius": 2,
+          "borderWidth": 1,
+          "color": "rgb(28, 28, 30)",
+        },
+        Object {
+          "height": 40,
+          "marginBottom": 16,
+          "marginTop": 4,
+          "paddingLeft": 8,
+          "width": 256,
+        },
+      ]
+    }
     value=""
   />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+        undefined,
+      ]
+    }
+  >
+    Password
+  </Text>
   <TextInput
     onChangeText={[Function]}
-    placeholder="Password"
     secureTextEntry={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(216, 216, 216)",
+          "borderRadius": 2,
+          "borderWidth": 1,
+          "color": "rgb(28, 28, 30)",
+        },
+        Object {
+          "height": 40,
+          "marginBottom": 16,
+          "marginTop": 4,
+          "paddingLeft": 8,
+          "width": 256,
+        },
+      ]
+    }
     value=""
   />
   <View
@@ -54,6 +112,9 @@ exports[`should render correctly 1`] = `
               "fontSize": 18,
               "margin": 8,
               "textAlign": "center",
+            },
+            Object {
+              "color": "rgb(0, 122, 255)",
             },
           ]
         }

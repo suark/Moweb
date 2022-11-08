@@ -1,6 +1,6 @@
 import React, { ReactElement, useContext, useState } from 'react';
-import { Button, TextInput } from 'react-native';
-import { Container } from '../../components';
+import { StyleSheet } from 'react-native';
+import { Button, Container, Text, TextInput } from '../../components';
 import { AuthContext } from '../../main';
 
 export function Login(): ReactElement {
@@ -11,13 +11,15 @@ export function Login(): ReactElement {
 
   return (
     <Container>
+      <Text>Username</Text>
       <TextInput
-        placeholder='Username'
+        style={styles.textInput}
         value={username}
         onChangeText={setUsername}
       />
+      <Text>Password</Text>
       <TextInput
-        placeholder='Password'
+        style={styles.textInput}
         value={password}
         onChangeText={setPassword}
         secureTextEntry
@@ -39,3 +41,13 @@ export function LogoutButton(): ReactElement {
     />
   );
 }
+
+export const styles = StyleSheet.create({
+  textInput: {
+    marginBottom: 16,
+    marginTop: 4,
+    width: 256,
+    height: 40,
+    paddingLeft: 8,
+  },
+});

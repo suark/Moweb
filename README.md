@@ -7,6 +7,10 @@ A multi-platform react native/react native web base app that can be server as an
 ## Screenshot
 
 Running simultaneously on chrome and android. Changes will instantly reflect on both when you save code changes in your text editor.
+
+Login Screen:
+![Moweb Login Screen on Chrome and on Android](MowebLogin.PNG)
+Settings Screen:
 ![Moweb Settings Screen on Chrome and on Android](MowebSettings.PNG)
 
 ## Summary

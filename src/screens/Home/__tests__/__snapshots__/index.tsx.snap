@@ -45,6 +45,9 @@ exports[`should render correctly 1`] = `
               "margin": 8,
               "textAlign": "center",
             },
+            Object {
+              "color": "rgb(0, 122, 255)",
+            },
           ]
         }
       >

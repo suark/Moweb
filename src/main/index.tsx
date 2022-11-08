@@ -5,6 +5,28 @@ import { useColorScheme } from 'react-native';
 import { Home, Login, LogoutButton, Settings } from '../screens';
 import './GestureHandler';
 
+export const baseColors = {
+  primary: '#ff2d55',
+  notification: '#00E0B5',
+  // override other colors here, if you like.
+};
+
+const CustomDarkTheme = {
+  ...DarkTheme,
+  colors: {
+    ...DarkTheme.colors,
+    ...baseColors,
+  },
+};
+
+const CustomDefaultTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    ...baseColors,
+  },
+};
+
 export type AuthContextState = {
   signIn: (data: SignInParams) => Promise<void>;
   signOut: () => void;
@@ -59,10 +81,12 @@ function mainReducer(prevState: StateType, action: ActionType) {
 export function Main(): ReactElement {
   const [state, dispatch] = useReducer(mainReducer, initialState);
   const scheme = useColorScheme();
+  const theme = scheme === 'dark' ? CustomDarkTheme : CustomDefaultTheme;
 
   const authContext = useMemo(
     () => ({
       signIn: async ({ username, password }: SignInParams) => {
+        // eslint-disable-next-line no-console
         console.log(`Logging In: username: ${username} password: ${password}`);
         dispatch({ type: 'SIGN_IN', payload: 'dummy-auth-token' });
       },
@@ -72,7 +96,7 @@ export function Main(): ReactElement {
   );
 
   return (
-    <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <NavigationContainer theme={theme}>
       <AuthContext.Provider value={authContext}>
         <Stack.Navigator
           screenOptions={{
